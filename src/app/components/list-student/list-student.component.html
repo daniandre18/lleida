@@ -1,0 +1,27 @@
+<h3>Student List</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Country</th>
+            <th scope="col">Credit  </th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="studentData"> 
+        <tr  *ngFor="let item of studentData.user_list.users">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.contact_name }}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.country}}</td>
+            <td>{{item.credit | currency}}</td>
+            <td>
+                <i class="fa fa-trash"></i>
+                &nbsp; 
+                <a><i class="fa fa-edit"></i></a> 
+            </td>
+        </tr>
+    </tbody>
+</table>

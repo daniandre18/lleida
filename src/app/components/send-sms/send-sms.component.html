@@ -1,0 +1,17 @@
+<h3>Send SMS </h3>
+<div *ngIf="message" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> SMS Send
+    <button (click)="removeMessage()" type="button" data-bs-dismiss="alert" aria-label="Close">X</button>
+</div>
+<form [formGroup]="addData" (ngSubmit)="SaveData()">
+    <div class="mb-3">
+        <label class="form-label">Phone</label>
+        <input type="text" class="form-control" placeholder="Enter phone ejem(+576545645)" formControlName="phone">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Text</label>
+        <textarea type="text" class="md-textarea md-textarea-auto form-control" formControlName="text" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!addData.valid" >Submit</button>
+</form>
