@@ -3,9 +3,9 @@ import { FormGroup, FormControl , Validators} from '@angular/forms';
 import { StudentsService } from '../../students.service';
 
 @Component( {
-  selector: 'app-add-student',
-  templateUrl: './add-student.component.html',
-  styleUrls: ['./add-student.component.css']
+  selector: 'app-add-apicredentials',
+  templateUrl: './add-apicredentials.component.html',
+  styleUrls: ['./add-apicredentials.component.css']
 } )
 export class AddStudentComponent implements OnInit {
 
