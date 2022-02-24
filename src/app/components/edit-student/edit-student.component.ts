@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { StudentsService } from '../../students.service';
+import { StudentsService } from 'src/app/services/students.service';
 import { ActivatedRoute } from '@angular/router';
 @Component( {
   selector: 'app-edit-student',

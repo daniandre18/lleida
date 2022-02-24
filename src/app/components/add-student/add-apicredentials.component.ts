@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl , Validators} from '@angular/forms';
-import { StudentsService } from '../../students.service';
+import { StudentsService } from 'src/app/services/students.service';
+
 
 @Component( {
   selector: 'app-add-student',
@@ -18,6 +19,7 @@ export class AddStudentComponent implements OnInit {
   ngOnInit(): void {
   }
   SaveData() {
+    //localStorage
     localStorage.removeItem("provider");
     localStorage.removeItem("password");
     localStorage.setItem('provider', this.addData.controls['provider'].value);
